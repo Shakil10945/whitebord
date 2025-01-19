@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My White Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    <style>
+        *{
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        canvas{
+            
+            background-color:wheat;
+            position: relative;
+            
+        }
+        .div-col{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            margin-left: 20px;
+        }
+        .all-col{
+            display: flex;
+            justify-content:center;
+        }
+        
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+            <canvas id="canvas"></canvas>   
+    </div>
+    <div class="all-col">
+        <!-- <button style="background-color: rebeccapurple;" id="col">Hi How are You ?</button> -->
+        <button style="background-color: rebeccapurple;" id="1" class="div-col c"></button> 
+        <button style="background-color: red;" id="2" class="div-col c"></button> 
+        <button style="background-color: yellow;" id="3" class="div-col c"></button> 
+        <button style="background-color: white;" id="4" class="div-col c"></button> 
+        <button style="background-color: gainsboro;" id="5" class="div-col c"></button>
+        <input type="range" id="range" max="50" min="1">
+        <!-- <button class="div-col c" id="1" data-color="red" style="background-color: red;" id="1" ></button>
+        <button class="div-col c" id="2" data-color="yellow" style="background-color: yellow;" id="2" ></button>
+        <button class="div-col c" id="3" data-color="teal" style="background-color: teal;" id="3" ></button>
+        <button class="div-col c" id="4" data-color="white" style="background-color: white;" id="4" ></button>
+        <button class="div-col c" id="5" data-color="blueviolet" style="background-color: blueviolet;" id="5" ></button>
+        <button class="div-col c" id="6" data-color="grey" style="background-color: grey;" id="6" ></button> -->
+
+
+        <!-- <button class="div-col c" data-color="red" style="background-color: red;" id="1" ></button>
+        <button class="div-col c" data-color="yellow" style="background-color: yellow;" id="2" ></button>
+        <div class="div-col c" data-color="teal" style="background-color: teal;" id="3" ></div>
+        <div class="div-col c" data-color="white" style="background-color: white;" id="4" ></div>
+        <div class="div-col c" data-color="blueviolet" style="background-color: blueviolet;" id="5" ></div>
+        <div class="div-col c" data-color="grey" style="background-color: grey;" id="6" ></div> -->
+
+        <div class="div-col" id="7"><i class="fa-light fa-pen-nib"></i></i></div>
+        <div class="div-col" id="8">&#10006</div>
+
+    </div>
+    
+
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.js"></script> -->
+    <!-- <script src="Script/addpage.js"></script> -->
+    <script src="Script/Latex.js"></script>
+    <script src="Script/Board.js"></script>
+    <!-- <script src="Script/html2canvas.min.js"></script>
+    <script src="Script/html2canvas.js"></script> -->
+    <script>
+          console.log(screen.width);
+          console.log(screen.height);
+
+        document.addEventListener("keypress",function(e){
+            var kye = e.key;
+            if(kye == "v"){
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+  
+
+  // Create a new Image object
+  const img = new Image();
+  
+  // Set the source of the image
+  img.src = 'II_ManimCE_v0.18.1.png'; // Replace with your image URL
+
+  // Once the image is loaded, draw it on the canvas
+  img.onload = function() {
+    // Draw the image on the canvas at coordinates (0, 0)
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    console.log("HI");
+  };
+}
+});
+
+    </script>
+
+    
+</body>
+</html>
